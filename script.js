@@ -10,7 +10,7 @@ searchButton.addEventListener('click', async () => {
         console.log(data);
         const tripContainer = document.getElementById('tripsContainer');
         tripContainer.innerHTML = '';
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 20; i++) {
             const tripModel = document.createElement('div');
             tripModel.classList.add('tripsModel');
 
