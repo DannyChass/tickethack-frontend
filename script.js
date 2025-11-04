@@ -29,6 +29,7 @@ searchButton.addEventListener('click', async () => {
 
             bookButton = document.createElement('button');
             bookButton.innerHTML='Book';
+            bookButton.classList.add('book');
             tripModel.appendChild(bookButton);
 
             tripContainer.appendChild(tripModel);
