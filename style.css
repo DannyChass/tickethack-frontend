@@ -112,7 +112,7 @@ header {
     height: 30%;
 }
 
-.inputdeparture {
+#inputdeparture {
     background-color: rgb(241, 241, 241);
     border-radius: 5px;
     border: none;
@@ -124,7 +124,7 @@ header {
     border-bottom: 2px solid rgb(206, 206, 206);
 }
 
-.inputarrival {
+#inputarrival {
     background-color: rgb(241, 241, 241);
     border-radius: 5px;
     border: none;
@@ -147,7 +147,7 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#reserve {
+#searchButton {
     background-color: rgb(13, 149, 112);
     border-radius: 5px;
     border: none;
@@ -182,3 +182,19 @@ header {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.backgroundCart {
+    grid-row-start: 2;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-color: rgb(206, 206, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myCart {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
