@@ -232,7 +232,6 @@ header {
 }
 
 .tripsModel {
-    display: none;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(241, 241, 241);
