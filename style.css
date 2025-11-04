@@ -271,7 +271,7 @@ header {
 
 #cartModel {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(237, 234, 231);
     padding-left: 1%;
