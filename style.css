@@ -238,6 +238,7 @@ header {
 }
 
 .tripsModel {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(241, 241, 241);
@@ -250,7 +251,7 @@ header {
     margin-bottom: 5%;
 }
 
-#book {
+.book {
     height: 80%;
     background-color: rgb(13, 149, 112);
     border: none;
