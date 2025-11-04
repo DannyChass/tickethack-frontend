@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+
+}
+
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr) ;;
+}
+
+
+header {
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(13, 149, 112);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.menu{  
+    display: flex;
+    gap: 20px;
+}
+
+#cart{
+    text-decoration: none;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+
+#booking{
+    text-decoration: none;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+
+.background {
+    grid-row-start: 2;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-image: url(/ui/images/background.jpg);
+    background-size: 100%;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+#presentation {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#compare {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+#search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    height: 40vh;
+    width: 20vw;
+    padding: 20px;
+    gap: 30px;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+
+.inputdeparture {
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    border: none;
+    height: 50%;
+    color: gray;
+    padding-left: 20px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 2px solid rgb(206, 206, 206);
+}
+
+.inputarrival {
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    border: none;
+    height: 50%;
+    color: gray;
+    padding-left: 20px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-top: 2px solid rgb(206, 206, 206);
+}
+
+.date {
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    border: none;
+    height: 10%;
+    color: gray;
+    padding-left: 20px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#reserve {
+    background-color: rgb(13, 149, 112);
+    border-radius: 5px;
+    border: none;
+    height: 12%;
+    color: white;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#trips {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    height: 40vh;
+    width: 20vw;
+    padding: 20px;
+}
+
+#imgtrain{
+    size: 100%;
+    height: 50%;
+    border-bottom: 1px solid;
+    
+}
+
+
+
+#book {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
