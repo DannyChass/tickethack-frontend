@@ -4,48 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>TicketHack Accueil</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div id="container">
-    <header>
-      <div class="logo" >
-        <a href="/landingpage.html" id="logo">Tickethack</a>
-      </div>
-      <div class="menu">
-        <a href="/cart.html" id="cart">Cart</a>
-        <a href="/booking.html" id="booking">Booking</a>
-      </div>
-    </header>
-    <div class="background">
-      <div id="text">
-        <h2 id="presentation">Explore the world effortlessly by train!</h2>
-        <p id="compare">
-          Compare, book and enjoy cheap prices for train tickets: your journey
-          start on Tickethack.
-        </p>
-      </div>
-      <div id="cards">
-        <div id="search">
-          <div id="input">
-            <input type="text" placeholder="Departure" id="inputdeparture"/>
-            <input type="text" placeholder="Arrival" id="inputarrival"/>
-          </div>
-          <input type="date" name="datereservation" id="date">
-          <button id="searchButton">Search</button>
+      <header>
+        <div class="logo">
+          <a href="/landingpage.html" id="logo">Tickethack</a>
         </div>
-        <div id="tripsContainer">    
-            <img src="/ui/images/train.png" alt="train" id="imgtrain">
+        <div class="menu">
+          <a href="/cart.html" id="cart">Cart</a>
+          <a href="/booking.html" id="booking">Booking</a>
+        </div>
+      </header>
+      <div class="background">
+        <div id="text">
+          <h2 id="presentation">Explore the world effortlessly by train!</h2>
+          <p id="compare">
+            Compare, book and enjoy cheap prices for train tickets: your journey
+            start on Tickethack.
+          </p>
+        </div>
+        <div id="cards">
+          <div id="search">
+            <div id="input">
+              <input type="text" placeholder="Departure" id="inputdeparture" />
+              <input type="text" placeholder="Arrival" id="inputarrival" />
+            </div>
+            <input type="date" name="datereservation" id="date" />
+            <button id="searchButton">Search</button>
+          </div>
+          <div id="tripsContainer">
+            <img src="/ui/images/train.png" alt="train" id="imgtrain" />
             <p id="textBook">It's time to book your future trip.</p>
             <div class="tripsModel">
-              <p id="trip">Paris > Lyon</p>
-              <p id="hours">16h34</p>
-              <p id="price">126€</p>
-              <button id="book">Book</button>
+              <p>Paris > Lyon</p>
+              <p>16h34</p>
+              <p>126€</p>
+              <button class="book">Book</button>
             </div>
+           
+          </div>
         </div>
       </div>
-    </div>
     </div>
     <script src="script.js"></script>
   </body>
