@@ -9,12 +9,12 @@
   <body>
     <div id="container">
     <header>
-      <div class="logo">
-        <h2 id="logoTitle">Tickethack</h2>
+      <div class="logo" >
+        <a href="/landingpage.html" id="logo">Tickethack</a>
       </div>
       <div class="menu">
-        <a href="#" id="cart">Cart</a>
-        <a href="#" id="booking">Booking</a>
+        <a href="/cart.html" id="cart">Cart</a>
+        <a href="/booking.html" id="booking">Booking</a>
       </div>
     </header>
     <div class="background">
@@ -31,12 +31,18 @@
             <input type="text" placeholder="Departure" id="inputdeparture"/>
             <input type="text" placeholder="Arrival" id="inputarrival"/>
           </div>
-          <input type="date" name="datereservation" class="date">
+          <input type="date" name="datereservation" id="date">
           <button id="searchButton">Search</button>
         </div>
-        <div id="trips">    
+        <div id="tripsContainer">    
             <img src="/ui/images/train.png" alt="train" id="imgtrain">
             <p id="book">It's time to book your future trip.</p>
+            <div class="tripsModel">
+              <p id="trip">Paris > Lyon</p>
+              <p id="hours">16h34</p>
+              <p id="price">126€</p>
+              <button id="book">book</button>
+            </div>
         </div>
       </div>
     </div>
