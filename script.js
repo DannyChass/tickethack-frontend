@@ -22,15 +22,18 @@ searchButton.addEventListener('click', async () => {
 
                 const pTrip = document.createElement('p');
                 pTrip.innerHTML = `${data[i].departure} > ${data[i].arrival}`;
+                tripModel.classList.add('pTrip')
                 tripModel.appendChild(pTrip);
 
                 const pHour = document.createElement('p');
                 const dateTrip = new Date(data[i].date);
+                tripModel.classList.add('pHour')
                 pHour.textContent = dateTrip.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
                 tripModel.appendChild(pHour);
 
                 const pPrice = document.createElement('p');
                 pPrice.innerHTML = `${data[i].price}€`;
+                tripModel.classList.add('pPrice')
                 tripModel.appendChild(pPrice);
 
                 bookButton = document.createElement('button');
