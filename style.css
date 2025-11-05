@@ -198,7 +198,8 @@ header {
 
 #imgtrain{
     size: 100%;
-    height: 50%;  
+    height: 50%;
+    margin-top: 20px;  
 }
 
 

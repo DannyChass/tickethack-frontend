@@ -8,8 +8,11 @@ searchButton.addEventListener('click', async () => {
         const response = await fetch(`http://localhost:3000/trips/search${query}`);
         const data = await response.json();
         console.log(data);
+
         const tripContainer = document.getElementById('tripsContainer');
-        tripContainer.innerHTML = '';
+        
+        if(data.length !== 0){
+            tripContainer.innerHTML = '';
         for (let i = 0; i < 20; i++) {
             const tripModel = document.createElement('div');
             tripModel.classList.add('tripsModel');
@@ -34,7 +37,11 @@ searchButton.addEventListener('click', async () => {
 
             tripContainer.appendChild(tripModel);
         }
-
+    } else {
+        console.log('test');
+        document.getElementById('imgtrain').src = "/ui/images/notfound.png";
+        document.getElementById('textBook').innerHTML = 'No trip found.'
+    }
     } catch (err) {
         console.log(err);
     }
