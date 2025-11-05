@@ -88,8 +88,9 @@ if (!localStorage.Id) {
     aBalise.innerHTML = 'Connexion';
     menu.appendChild(aBalise);
 }else{
+    localStorage.removeItem('Id');
     const aBalise = document.createElement('a');
-    aBalise.href = '/login.html';
+    aBalise.href = '/landingpage.html';
     aBalise.id = 'deconnection';
     aBalise.innerHTML = 'Deconnection';
     menu.appendChild(aBalise);
