@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-</head>
-<body>
-    <div>
-        <input type="email" placeholder="email" id="loginEmail">
-        <input type="password" name="password" placeholder="password" id="loginPassword">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="container">
+        <div id="bigcontainer">
+      <div id="containerlogin">
+        <p class="loginText">Login</p>
+        <input type="email" placeholder="email" class="inputtext" name="E-mail" id="loginEmail" />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          class="inputtext"
+          id="loginPassword"
+        />
         <button type="submit" id="loginButton">login</button>
-    </div>
-    <div id="signup">
-        <input type="text" name="firstName" placeholder="firstName" id="firstName">
-        <input type="text name="lastName" placeholder="lastName" id="lastName">
-        <input type="email" name="email" placeholder="email" id="signupEmail">
-        <input type="password" placeholder="pass" id="signupPassword">
+      </div>
+      <div id="signup">
+        <p class="loginText" > Sign Up</p>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="firstName"
+          class="inputtext"
+          id="firstName"
+        />
+        <input type="text name="lastName" placeholder="lastName" class="inputtext" id="lastName">
+        <input type="email" name="email" placeholder="email" class="inputtext" id="signupEmail" />
+        <input type="password" placeholder="pass" class="inputtext" id="signupPassword" />
         <button type="submit" id="signupButton">submit</button>
         <script src="login.js"></script>
+      </div>
+        </div>
     </div>
-</body>
+  </body>
 </html>
