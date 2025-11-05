@@ -1,3 +1,5 @@
+let currentData = [];
+
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', async () => {
     const departure = document.getElementById('inputdeparture').value;
@@ -10,39 +12,62 @@ searchButton.addEventListener('click', async () => {
         console.log(data);
 
         const tripContainer = document.getElementById('tripsContainer');
-        
-        if(data.length !== 0){
+
+        if (data.length !== 0) {
+            currentData = data;
             tripContainer.innerHTML = '';
-        for (let i = 0; i < 20; i++) {
-            const tripModel = document.createElement('div');
-            tripModel.classList.add('tripsModel');
+            for (let i = 0; i < 20; i++) {
+                const tripModel = document.createElement('div');
+                tripModel.classList.add('tripsModel');
 
-            const pTrip = document.createElement('p');
-            pTrip.innerHTML = `${data[i].departure} > ${data[i].arrival}`;
-            tripModel.appendChild(pTrip);
+                const pTrip = document.createElement('p');
+                pTrip.innerHTML = `${data[i].departure} > ${data[i].arrival}`;
+                tripModel.appendChild(pTrip);
 
-            const pHour = document.createElement('p');
-            const dateTrip = new Date(data[i].date);
-            pHour.textContent = dateTrip.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            tripModel.appendChild(pHour);
+                const pHour = document.createElement('p');
+                const dateTrip = new Date(data[i].date);
+                pHour.textContent = dateTrip.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                tripModel.appendChild(pHour);
 
-            const pPrice = document.createElement('p');
-            pPrice.innerHTML=`${data[i].price}€`;
-            tripModel.appendChild(pPrice);
+                const pPrice = document.createElement('p');
+                pPrice.innerHTML = `${data[i].price}€`;
+                tripModel.appendChild(pPrice);
 
-            bookButton = document.createElement('button');
-            bookButton.innerHTML='Book';
-            bookButton.classList.add('book');
-            tripModel.appendChild(bookButton);
+                bookButton = document.createElement('button');
+                bookButton.innerHTML = 'Book';
+                bookButton.classList.add('book');
+                tripModel.appendChild(bookButton);
+                bookButton.addEventListener('click', () => addTripToUserCart(data[i]));
 
-            tripContainer.appendChild(tripModel);
+                tripContainer.appendChild(tripModel);
+            }
+        } else {
+            document.getElementById('imgtrain').src = "/ui/images/notfound.png";
+            document.getElementById('textBook').innerHTML = 'No trip found.'
         }
-    } else {
-        console.log('test');
-        document.getElementById('imgtrain').src = "/ui/images/notfound.png";
-        document.getElementById('textBook').innerHTML = 'No trip found.'
-    }
     } catch (err) {
         console.log(err);
     }
 })
+
+async function addTripToUserCart(trip) {
+    const userId = localStorage.getItem('Id');
+    if (!userId) {
+        alert("Vous devez être connecté pour réserver un voyage.");
+        return
+    }
+
+    try {
+        const response = await fetch('http://localhost:3000/users/addTripToUserCart', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId, tripId: trip._id }),
+        });
+
+        const data = await response.json();
+        console.log(data);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
