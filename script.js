@@ -87,4 +87,10 @@ if (!localStorage.Id) {
     aBalise.id = 'connection';
     aBalise.innerHTML = 'Connexion';
     menu.appendChild(aBalise);
+}else{
+    const aBalise = document.createElement('a');
+    aBalise.href = '/login.html';
+    aBalise.id = 'deconnection';
+    aBalise.innerHTML = 'Deconnection';
+    menu.appendChild(aBalise);
 }
