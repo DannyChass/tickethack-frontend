@@ -71,3 +71,17 @@ async function addTripToUserCart(trip) {
         console.log(error);
     }
 }
+
+const menu = document.querySelector('.menu');
+menu.innerHTML=`<a href="/cart.html" id="cart">Cart</a>
+          <a href="/booking.html" id="booking">Booking</a>`;
+
+console.log(localStorage.userId);
+if (!localStorage.Id) {
+    
+    const aBalise = document.createElement('a');
+    aBalise.href = '/login.html';
+    aBalise.id = 'connection';
+    aBalise.innerHTML = 'Connexion';
+    menu.appendChild(aBalise);
+}
