@@ -228,6 +228,10 @@ header {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    width: 70%;
+    height: 40%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #mybooking {
@@ -261,14 +265,6 @@ header {
     font-weight: bold;
 }
 
-#myCart{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
 #cartModel {
     display: flex;
     justify-content: space-between;
@@ -280,13 +276,35 @@ header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     color: rgb(97, 97, 97);
+    border-radius: 10px ;
 }
 
 #deleteCart{
-  height: 20%;
+  height: 50%;
+  width: 3%;
+  background-color: rgb(13, 149, 112);
+  color: white;
+  border: none;
+  border-radius: 30%;
 }
 
 #title {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
+
+#footerCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(6, 23, 78);
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+}
+
+#purchase {
+    margin-right: 5%;
+    size: 100%;
+    height: 80%;
 }
